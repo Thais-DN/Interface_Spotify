@@ -4,6 +4,7 @@ import {
     Library,
     ChevronLeft,
     ChevronRight,
+    Play,
 } from "lucide-react";
 
 export default function Home() {
@@ -126,56 +127,75 @@ export default function Home() {
                         Good Afternoom
                     </h1>
                     <div className="grid grid-cols-3 gap-4 mt-4">
-                        <div className="bg-white/10 rounded flex items-center gap-4 overflow-hidden">
-                            <svg>
-                                <image
-                                    href="/images/disney.jpg"
-                                    width="120"
-                                    height="120"
-                                />
-                            </svg>
+                        <a
+                            href="#"
+                            className="bg-white/10 rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
+                        >
+                            <img
+                                src="/images/disney.jpg"
+                                width="80"
+                                height="80"
+                            />
                             <strong></strong>Desenhos da Disney
-                        </div>
-                        <div className="bg-white/10 rounded flex items-center gap-4 overflow-hidden">
-                            <image href="" width={120} height={120} />
+                            <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8">
+                                <Play />
+                            </button>
+                        </a>
+                        <a
+                            href="#"
+                            className="bg-white/10 rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
+                        >
+                            <img
+                                src="/images/portugal.jpg"
+                                width="100"
+                                height="100"
+                            />
                             <strong></strong>Portugal Top Hits
-                        </div>
-                        <div className="bg-white/10 rounded flex items-center gap-4 overflow-hidden">
-                            <image
-                                src=""
-                                width={120}
-                                height={120}
-                                alt="capa do album"
+                        </a>
+                        <a
+                            href="#"
+                            className="bg-white/10 rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
+                        >
+                            <img
+                                src="/images/pagodin.jfif"
+                                width="80"
+                                height="80"
                             />
                             <strong></strong>Pagodin Para Relaxar
-                        </div>
-                        <div className="bg-white/10 rounded flex items-center gap-4 overflow-hidden">
-                            <image
-                                src=""
-                                width={120}
-                                height={120}
-                                alt="capa do album"
+                        </a>
+                        <a
+                            href="#"
+                            className="bg-white/10 rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
+                        >
+                            <img
+                                src="/images/koreba.jpg"
+                                width="90"
+                                height="90"
                             />
                             <strong></strong>Bad Koreba
-                        </div>
-                        <div className="bg-white/10 rounded flex items-center gap-4 overflow-hidden">
-                            <image
-                                src=""
-                                width={120}
-                                height={120}
-                                alt="capa do album"
+                        </a>
+                        <a
+                            href="#"
+                            className="bg-white/10 rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
+                        >
+                            <img
+                                src="/images/Anavitoria.png"
+                                width="80"
+                                height="80"
                             />
                             <strong></strong>Musicas AnaVitoria
-                        </div>
-                        <div className="bg-white/10 rounded flex items-center gap-4 overflow-hidden">
-                            <image
-                                src=""
-                                width={120}
-                                height={120}
-                                alt="capa do album"
+                        </a>
+                        <a
+                            href="#"
+                            className="bg-white/10 rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
+                        >
+                            <img
+                                src="/images/Alemanha.png"
+                                width="100"
+                                height="100"
                             />
                             <strong></strong>Disney Em Alemão
-                        </div>
+                        </a>
                     </div>
                 </main>
             </div>
