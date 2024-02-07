@@ -12,32 +12,42 @@ import {
     Volume,
     Maximize2,
 } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export function PlayMusic() {
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio("/mp3/blue-Bird.mp3"));
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
+
+    useEffect(() => {
+        const audio = new Audio("/mp3/blue-Bird.mp3");
+        audioRef.current = audio;
+
+        const onTimeUpdate = () => setCurrentTime(audio.currentTime);
+        const onLoadedMetadata = () => setDuration(audio.duration);
+
+        audio.addEventListener("timeupdate", onTimeUpdate);
+        audio.addEventListener("loadedmetadata", onLoadedMetadata);
+
+        return () => {
+            audio.removeEventListener("timeupdate", onTimeUpdate);
+            audio.removeEventListener("loadedmetadata", onLoadedMetadata);
+        };
+    }, []);
 
     const togglePlayPause = () => {
         const prevValue = isPlaying;
         setIsPlaying(!prevValue);
-        if (!prevValue) {
-            audioRef.current.play();
-        } else {
-            audioRef.current.pause();
+        if (audioRef.current) {
+            if (!prevValue) {
+                audioRef.current.play();
+            } else {
+                audioRef.current.pause();
+            }
         }
     };
-
-    audioRef.current.ontimeupdate = () => {
-        setCurrentTime(audioRef.current.currentTime);
-    };
-
-    audioRef.current.onloadedmetadata = () => {
-        setDuration(audioRef.current.duration);
-    };
-
     return (
         <>
             <div className="flex items-center gap-3">

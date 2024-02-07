@@ -1,12 +1,5 @@
 "use client";
-import {
-    Pause,
-    Play,
-    Repeat,
-    Shuffle,
-    SkipBack,
-    SkipForward,
-} from "lucide-react";
+import { Pause, Play } from "lucide-react";
 import { useState, useRef } from "react";
 
 export function PlayMusicMobile() {
@@ -36,7 +29,6 @@ export function PlayMusicMobile() {
     return (
         <div className="flex flex-col w-full">
             <div className="w-full flex justify-between items-center p-3">
-                {/* Controles à esquerda */}
                 <div className="flex items-center gap-3">
                     <img
                         src="/images/blueBird.jpg"
