@@ -1,21 +1,22 @@
-import { useState, useRef } from "react";
+"use client";
 import {
-    Play,
     Pause,
+    Play,
+    Repeat,
     Shuffle,
     SkipBack,
     SkipForward,
-    Repeat,
     Mic2,
     LayoutList,
     Laptop2,
     Volume,
     Maximize2,
 } from "lucide-react";
+import { useState, useRef } from "react";
 
-export function Footer() {
+export function PlayMusic() {
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio("/mp3/blue-Bird.mp3")); // Substitua com o caminho correto para o seu arquivo MP3
+    const audioRef = useRef(new Audio("/mp3/blue-Bird.mp3"));
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
 
@@ -38,7 +39,7 @@ export function Footer() {
     };
 
     return (
-        <footer className="bg-zinc-800 border-t border-zinc-700 px-6 py-4 flex items-center justify-between">
+        <>
             <div className="flex items-center gap-3">
                 <img
                     src="/images/blueBird.jpg"
@@ -54,14 +55,14 @@ export function Footer() {
                 </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-                <div className="flex items-center gap-6">
+                <div className="flex items-center  gap-4">
                     <Shuffle size={20} className="text-zinc-200" />
                     <SkipBack size={20} className="text-zinc-200" />
                     <button
                         className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"
                         onClick={togglePlayPause}
                     >
-                        {isPlaying ? <Pause /> : <Play />}
+                        {isPlaying ? <Pause /> : <Play className="pl-1" />}
                     </button>
                     <SkipForward size={20} className="text-zinc-200" />
                     <Repeat size={20} className="text-zinc-200" />
@@ -97,6 +98,6 @@ export function Footer() {
                 </div>
                 <Maximize2 size={20} />
             </div>
-        </footer>
+        </>
     );
 }

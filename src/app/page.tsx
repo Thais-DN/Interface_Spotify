@@ -1,4 +1,4 @@
-import { Footer } from "@/componets/Footer/Footer.client";
+import { Footer } from "@/componets/Footer/Footer";
 import { Hits } from "@/componets/Hits/Hits";
 import { MyPlaylist } from "@/componets/MyPlaylist/MyPlaylist";
 import {
@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <div className="h-screen flex flex-col">
             <div className="flex flex-1">
-                <aside className="w-72 bg-zinc-950 p-6">
+                <aside className="w-48 bg-zinc-950 p-6 hidden md:block lg:w-72">
                     <div className="flex items-center gap-2">
                         <div className="w-3 h-3 bg-red-500 rounded-full" />
                         <div className="w-3 h-3 bg-yellow-500 rounded-full" />
@@ -128,7 +128,7 @@ export default function Home() {
                     <h1 className="font-semibold text-3xl mt-10">
                         Good Afternoom
                     </h1>
-                    <div className="grid grid-cols-3 gap-4 mt-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                         <MyPlaylist />
                         <MyPlaylist />
                         <MyPlaylist />
@@ -140,7 +140,9 @@ export default function Home() {
                     <h2 className="font-semibold text-2xl mt-10">
                         Made for Thais Dias
                     </h2>
-                    <div className="grid grid-cols-6 gap-8 mt-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-4">
+                        <Hits />
+                        <Hits />
                         <Hits />
                         <Hits />
                         <Hits />
@@ -149,7 +151,9 @@ export default function Home() {
                     </div>
                 </main>
             </div>
-            <Footer />
+            <div className="fixed bottom-0 z-10 w-full p-2">
+                <Footer />
+            </div>
         </div>
     );
 }
