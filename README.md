@@ -18,3 +18,7 @@ This project is a clone of the Spotify interface built with Next.js, TypeScript,
 Check out the live version of the project here: [Spotify Interface Clone on Vercel](https://your-vercel-project-url.vercel.app)
 
 ![Spotify Interface Clone Preview](./public/images/tela.png)
+
+## Project Status
+
+**Note**: This project is currently in the development phase. I am aware of existing layout issues and am actively working to find and implement solutions. Open for help.
