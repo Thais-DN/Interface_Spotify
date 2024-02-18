@@ -55,7 +55,7 @@ export function PlayMusicMobile() {
                     </div>
                 </div>
                 <button
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-white"
                     onClick={togglePlayPause}
                 >
                     {isPlaying ? <Pause /> : <Play className="pl-1" />}

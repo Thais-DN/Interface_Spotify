@@ -1,5 +1,4 @@
 import { Play } from "lucide-react";
-import Image, { ImageProps } from "next/image";
 
 export function MyPlaylist() {
     return (
@@ -8,7 +7,7 @@ export function MyPlaylist() {
                 href="#"
                 className="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transition-colors"
             >
-                <Image
+                <img
                     src="/images/blueBird.jpg"
                     width={88}
                     height={88}

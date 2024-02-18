@@ -14,9 +14,6 @@ export function Hits() {
             <span className="text-sm text-zinc-400">
                 Wallos, CION, Girl in red and more
             </span>
-            <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-20 invisible group-hover:visible">
-                <Play />
-            </button>
         </div>
     );
 }

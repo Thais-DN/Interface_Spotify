@@ -1,3 +1,5 @@
+"use client";
+
 import { Footer } from "@/componets/Footer/Footer";
 import { Hits } from "@/componets/Hits/Hits";
 import { MyPlaylist } from "@/componets/MyPlaylist/MyPlaylist";
@@ -140,7 +142,7 @@ export default function Home() {
                     <h2 className="font-semibold text-2xl mt-10">
                         Made for Thais Dias
                     </h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 mt-4">
                         <Hits />
                         <Hits />
                         <Hits />
