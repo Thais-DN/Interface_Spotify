@@ -18,19 +18,14 @@ export default function Home() {
     const [isTabletOrMobile, setIsTabletOrMobile] = useState(false);
 
     useEffect(() => {
-        // Função para atualizar o estado baseado na largura da janela
         const handleResize = () => {
-            // 768px é um breakpoint comum para tablets
             setIsTabletOrMobile(window.innerWidth < 900);
         };
 
-        // Adicionar listener ao redimensionar
         window.addEventListener("resize", handleResize);
 
-        // Chamar a função handleResize imediatamente para definir o estado inicial
         handleResize();
 
-        // Remover listener ao desmontar
         return () => window.removeEventListener("resize", handleResize);
     }, []);
     return (

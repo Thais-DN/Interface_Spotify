@@ -22,7 +22,7 @@ export function PlayMusic() {
     const [currentTime, setCurrentTime] = useState(0);
 
     useEffect(() => {
-        const audio = new Audio("/mp3/blue-Bird.mp3");
+        const audio = new Audio("/mp3/blue-bird.mp3");
         audioRef.current = audio;
 
         const onTimeUpdate = () => setCurrentTime(audio.currentTime);
