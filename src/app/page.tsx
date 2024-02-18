@@ -1,6 +1,5 @@
 "use client";
 
-import { Footer } from "@/componets/Footer/Footer";
 import { PlayMusic } from "@/componets/Footer/PlayMusic";
 import { PlayMusicMobile } from "@/componets/Footer/PlayMusicMobile";
 import { Hits } from "@/componets/Hits/Hits";
@@ -175,14 +174,27 @@ export default function Home() {
                         <MyPlaylist />
                         <MyPlaylist />
                         <MyPlaylist />
-                        <MyPlaylist />
                     </div>
 
                     <h2 className="font-semibold text-2xl mt-10">
                         Made for Thais Dias
                     </h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 mt-4">
-                        <Hits />
+                        <div className="bg-white/5 p-3 group rounded-md flex flex-col gap-2 hover:bg-white/10">
+                            <img
+                                src="/images/blueBird.jpg"
+                                className="w-full"
+                                width={120}
+                                height={120}
+                                alt="capa do album"
+                            />
+                            <strong className="font-semibold">
+                                Daily Mix 1
+                            </strong>
+                            <span className="text-sm text-zinc-400">
+                                Wallos, CION, Girl in red and more
+                            </span>
+                        </div>
                         <Hits />
                         <Hits />
                         <Hits />
@@ -196,7 +208,6 @@ export default function Home() {
                 <footer className="bg-zinc-800 border-t border-zinc-700 flex items-center justify-between p-2">
                     {isTabletOrMobile ? <PlayMusicMobile /> : <PlayMusic />}
                 </footer>
-                <Footer />
             </div>
         </div>
     );
